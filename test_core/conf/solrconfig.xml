@@ -438,11 +438,23 @@
     <!-- default values for query parameters can be specified, these
          will be overridden by parameters in the request
       -->
-     <lst name="defaults">
+     <!--<lst name="defaults">
        <str name="echoParams">explicit</str>
        <int name="rows">10</int>
-     </lst>
+     </lst>-->
+      <lst name="defaults">
+        <str name="defType">dismax</str>
+        <str name="echoParams">explicit</str>
+        <int name="rows">10</int>
+        <str name="q.alt">*:*</str>
+        <str name="facet.mincount">1</str>
 
+        <str name="qf">
+          title_main_t^100000
+          subject_t^500
+          author_main_t^100
+        </str>
+      </lst>
     </requestHandler>
 
   <!-- A request handler that returns indented JSON by default -->
