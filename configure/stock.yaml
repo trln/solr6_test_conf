@@ -23,7 +23,9 @@ dt:       date
 isbn:     isbn
 lccn:     lccn
 num:      numericID
-pp:       pipe_delimited
+pd:       pipe_delimited
+dd:       dash_delimited
+sd:       slash_delimited
 bin:      binary
 bool:     boolean
 loc:      location_rpt
