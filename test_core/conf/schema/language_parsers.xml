@@ -1,5 +1,6 @@
 <!-- Arabic -->
 <dynamicField name="*_ara_v" type="text_ar"  indexed="true"  stored="false"/>
+<copyField source="*_ara_v" dest="*_vern" />
 <fieldType name="text_ar" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -14,6 +15,7 @@
 
 <!-- Bulgarian -->
 <dynamicField name="*_bul_v" type="text_bg"  indexed="true"  stored="false"/>
+<copyField source="*_bul_v" dest="*_vern" />
 <fieldType name="text_bg" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/> 
@@ -25,6 +27,7 @@
 
 <!-- Catalan -->
 <dynamicField name="*_cat_v" type="text_ca"  indexed="true"  stored="false"/>
+<copyField source="*_cat_v" dest="*_vern" />
 <fieldType name="text_ca" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -38,6 +41,7 @@
 
 <!-- CJK bigram (see text_ja for a Japanese configuration using morphological analysis) -->
 <dynamicField name="*_cjk_v" type="text_cjk"  indexed="true"  stored="false"/>
+<copyField source="*_cjk_v" dest="*_vern" />
 <fieldType name="text_cjk" class="solr.TextField" positionIncrementGap="100">
   <analyzer>
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -51,6 +55,7 @@
 
 <!-- Czech -->
 <dynamicField name="*_cze_v" type="text_cz"  indexed="true"  stored="false"/>
+<copyField source="*_cze_v" dest="*_vern" />
 <fieldType name="text_cz" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -62,6 +67,7 @@
 
 <!-- Danish -->
 <dynamicField name="*_dan_v" type="text_da"  indexed="true"  stored="false"/>
+<copyField source="*_dan_v" dest="*_vern" />
 <fieldType name="text_da" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -73,6 +79,7 @@
 
 <!-- German -->
 <dynamicField name="*_ger_v" type="text_de"  indexed="true"  stored="false"/>
+<copyField source="*_ger_v" dest="*_vern" />
 <fieldType name="text_de" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -87,6 +94,7 @@
 
 <!-- Greek -->
 <dynamicField name="*_gre_v" type="text_el"  indexed="true"  stored="false"/>
+<copyField source="*_gre_v" dest="*_vern" />
 <fieldType name="text_el" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -99,6 +107,7 @@
 
 <!-- Spanish -->
 <dynamicField name="*_spa_v" type="text_es"  indexed="true"  stored="false"/>
+<copyField source="*_spa_v" dest="*_vern" />
 <fieldType name="text_es" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -111,6 +120,7 @@
 
 <!-- Basque -->
 <dynamicField name="*_baq_v" type="text_eu"  indexed="true"  stored="false"/>
+<copyField source="*_baq_v" dest="*_vern" />
 <fieldType name="text_eu" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -122,6 +132,7 @@
 
 <!-- Persian -->
 <dynamicField name="*_per_v" type="text_fa"  indexed="true"  stored="false"/>
+<copyField source="*_per_v" dest="*_vern" />
 <fieldType name="text_fa" class="solr.TextField" positionIncrementGap="100">
   <analyzer>
     <!-- for ZWNJ -->
@@ -136,6 +147,7 @@
 
 <!-- Finnish -->
 <dynamicField name="*_fin_v" type="text_fi"  indexed="true"  stored="false"/>
+<copyField source="*_fin_v" dest="*_vern" />
 <fieldType name="text_fi" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -148,6 +160,7 @@
 
 <!-- French -->
 <dynamicField name="*_fre_v" type="text_fr"  indexed="true"  stored="false"/>
+<copyField source="*_fre_v" dest="*_vern" />
 <fieldType name="text_fr" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -164,6 +177,8 @@
 <!-- Irish -->
 <dynamicField name="*_gle_v" type="text_ga"  indexed="true"  stored="false"/>
 <dynamicField name="*_iri_v" type="text_ga"  indexed="true"  stored="false"/>
+<copyField source="*_iri_v" dest="*_vern" />
+<copyField source="*_gle_v" dest="*_vern" />
 <fieldType name="text_ga" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -179,6 +194,7 @@
 
 <!-- Galician -->
 <dynamicField name="*_gag_v" type="text_gl"  indexed="true"  stored="false"/>
+<copyField source="*_gag_v" dest="*_vern" />
 <fieldType name="text_gl" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -191,6 +207,7 @@
 
 <!-- Hindi -->
 <dynamicField name="*_hin_v" type="text_hi"  indexed="true"  stored="false"/>
+<copyField source="*_hin_v" dest="*_vern" />
 <fieldType name="text_hi" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -206,6 +223,7 @@
 
 <!-- Hungarian -->
 <dynamicField name="*_hun_v" type="text_hu"  indexed="true"  stored="false"/>
+<copyField source="*_hun_v" dest="*_vern" />
 <fieldType name="text_hu" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -218,6 +236,7 @@
 
 <!-- Armenian -->
 <dynamicField name="*_arm_v" type="text_hy"  indexed="true"  stored="false"/>
+<copyField source="*_arm_v" dest="*_vern" />
 <fieldType name="text_hy" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -229,6 +248,7 @@
 
 <!-- Indonesian -->
 <dynamicField name="*_ind_v" type="text_id"  indexed="true"  stored="false"/>
+<copyField source="*_ind_v" dest="*_vern" />
 <fieldType name="text_id" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -241,6 +261,7 @@
 
 <!-- Italian -->
 <dynamicField name="*_ita_v" type="text_it"  indexed="true"  stored="false"/>
+<copyField source="*_ita_v" dest="*_vern" />
 <fieldType name="text_it" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -260,6 +281,7 @@
      OR if you would like to optimize for recall (default).
 -->
 <dynamicField name="*_jpn_v" type="text_ja"  indexed="true"  stored="false"/>
+<copyField source="*_jpn_v" dest="*_vern" />
 <fieldType name="text_ja" class="solr.TextField" positionIncrementGap="100" autoGeneratePhraseQueries="false">
   <analyzer>
     <!-- Kuromoji Japanese morphological analyzer/tokenizer (JapaneseTokenizer)
@@ -309,6 +331,7 @@
 
 <!-- Latvian -->
 <dynamicField name="*_lav_v" type="text_lv"  indexed="true"  stored="false"/>
+<copyField source="*_lav_v" dest="*_vern" />
 <fieldType name="text_lv" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -320,6 +343,7 @@
 
 <!-- Dutch -->
 <dynamicField name="*_dut_v" type="text_nl"  indexed="true"  stored="false"/>
+<copyField source="*_dut_v" dest="*_vern" />
 <fieldType name="text_nl" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -332,6 +356,7 @@
 
 <!-- Norwegian -->
 <dynamicField name="*_nor_v" type="text_no"  indexed="true"  stored="false"/>
+<copyField source="*_nor_v" dest="*_vern" />
 <fieldType name="text_no" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -344,7 +369,8 @@
 </fieldType>
 
 <!-- Portuguese -->
-<dynamicField name="*_txt_pt" type="text_pt"  indexed="true"  stored="false"/>
+<dynamicField name="*_por_v" type="text_pt"  indexed="true"  stored="false"/>
+<copyField source="*_por_v" dest="*_vern" />
 <fieldType name="text_pt" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -358,7 +384,8 @@
 </fieldType>
 
 <!-- Romanian -->
-<dynamicField name="*_por_v" type="text_ro"  indexed="true"  stored="false"/>
+<dynamicField name="*_rum_v" type="text_ro"  indexed="true"  stored="false"/>
+<copyField source="*_rum_v" dest="*_vern" />
 <fieldType name="text_ro" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -370,6 +397,7 @@
 
 <!-- Russian -->
 <dynamicField name="*_rus_v" type="text_ru"  indexed="true"  stored="false"/>
+<copyField source="*_rus_v" dest="*_vern" />
 <fieldType name="text_ru" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -382,6 +410,7 @@
 
 <!-- Swedish -->
 <dynamicField name="*_swe_v" type="text_sv"  indexed="true"  stored="false"/>
+<copyField source="*_swe_v" dest="*_vern" />
 <fieldType name="text_sv" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -394,6 +423,7 @@
 
 <!-- Thai -->
 <dynamicField name="*_tha_v" type="text_th"  indexed="true"  stored="false"/>
+<copyField source="*_tha_v" dest="*_vern" />
 <fieldType name="text_th" class="solr.TextField" positionIncrementGap="100">
   <analyzer>
     <tokenizer class="solr.ThaiTokenizerFactory"/>
@@ -404,6 +434,7 @@
 
 <!-- Turkish -->
 <dynamicField name="*_tur_v" type="text_tr"  indexed="true"  stored="false"/>
+<copyField source="*_tur_v" dest="*_vern" />
 <fieldType name="text_tr" class="solr.TextField" positionIncrementGap="100">
   <analyzer> 
     <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -415,6 +446,8 @@
 
 <!-- Copy field info -->
 <dynamicField name="*_v" type="ignored" indexed="false" stored="false" multiValued="true" />
-<copyField source="*_v" dest="*_vern" />
+<dynamicField name="*_vern" type="string" indexed="false" stored="true" multiValued="true" />
+
+
 
 
