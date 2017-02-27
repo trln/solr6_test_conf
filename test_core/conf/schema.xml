@@ -38,6 +38,9 @@
 
   <!ENTITY library_types    SYSTEM "schema/library_types.xml">
 
+  <!-- Languages -->
+  <!ENTITY language_parsers    SYSTEM "schema/language_parsers.xml">
+
   <!-- ...and the dynanic fields -->
   <!ENTITY dynamic_fields    SYSTEM "schema/dynamic_fields.xml">
 
@@ -174,6 +177,7 @@
  <!-- Inser the dynamic fields -->
 
  &dynamic_fields;
+ &language_parsers;
 
 
 
