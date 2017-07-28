@@ -43,9 +43,9 @@
   institution_f^1
   isbn_number_isbn^1
   isbn_qualifying_info_t^1
-  issn_linking_isbn^1
-  issn_primary_isbn^1
-  issn_series_isbn^1
+  issn_linking_num^1
+  issn_primary_num^1
+  issn_series_num^1
   items_barcode_str^1
   items_call_number_lccn^1
   items_location_f^1
@@ -366,4 +366,10 @@
 <str name="subject_pf">
   subjects_t^1
   subjects_f^1
+</str>
+<str name="isbn_issn_qf">
+  isbn_number_isbn
+  issn_linking_num
+  issn_primary_num
+  issn_series_num
 </str>
