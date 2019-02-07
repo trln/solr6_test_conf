@@ -123,8 +123,8 @@
 
 
 
-<!-- Suffix _str, producing indexed fields of type 'string' -->
-<dynamicField name="*_str" type="string" indexed="true" stored="false" multiValued="true" />
+<!-- Suffix _str, producing indexed fields of type 'string_punct_stop' -->
+<dynamicField name="*_str" type="string_punct_stop" indexed="true" stored="false" multiValued="true" />
 <dynamicField name="*_str_stored" type="ignored" indexed="false" stored="false" multiValued="true" />
 <dynamicField name="*_str_single" type="ignored" indexed="false" stored="false" multiValued="false" />
 <dynamicField name="*_str_stored_single" type="ignored" indexed="false" stored="false" multiValued="false" />
