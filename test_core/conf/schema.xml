@@ -10,7 +10,7 @@
   <!ENTITY hunspellstemmer SYSTEM "schema/stemming/hunspellstemmer.xml">
 
   <!-- Variables to be inserted later or in included files -->
-  <!ENTITY stemmer "&kstemmer;">
+  <!ENTITY stemmer "&snowball_stemmer;">
 
   <!-- External Files -->
   <!ENTITY char_expansion_file "schema/token_fixing_charfilter.txt">
@@ -30,9 +30,11 @@
 
   <!ENTITY primative_types  SYSTEM "schema/primative_types.xml">
 
+  <!ENTITY char_filters  SYSTEM "schema/char_filters.xml">
   <!ENTITY basic_text_chain SYSTEM "schema/basic_text_chain.xml">
   <!ENTITY basic_text_chain_with_synonyms SYSTEM "schema/basic_text_chain_with_synonyms.xml">
   <!ENTITY text_types       SYSTEM "schema/text_types.xml">
+  <!ENTITY string_types     SYSTEM "schema/string_types.xml">
   <!ENTITY numeric_types    SYSTEM "schema/numeric_types.xml">
   <!ENTITY delimited_types  SYSTEM "schema/delimited_types.xml">
 
@@ -46,6 +48,7 @@
 
 
   ]>
+
 
 <!--
  Licensed to the Apache Software Foundation (ASF) under one or more
@@ -99,6 +102,7 @@
   <!-- Load up the field types -->
   &primative_types;
   &text_types;
+  &string_types;
   &numeric_types;
   &library_types;
   &delimited_types;
@@ -166,15 +170,26 @@
      in a compatible way. Any analysis applied to the <uniqueKey> should _not_ produce multiple
      tokens
    -->
-   <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
+
+  <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
 
 
  <!-- Field to use to determine and enforce document uniqueness.
       Unless this field is marked with required="false", it will be a required field
    -->
- <uniqueKey>id</uniqueKey>
+  <uniqueKey>id</uniqueKey>
 
- <!-- Inser the dynamic fields -->
+  <!-- Field used for record rollup. Must be single-valued, indexed, and stored
+       in order to retrieve collapsed documents in the expand component in the
+       response from Solr. -->
+  <field name="rollup_id" type="string" indexed="true" stored="true" multiValued="false" />
+
+  <!-- Define fields used to build suggestion indexes -->
+  <field name="author_suggest" type="text_suggest" indexed="false" stored="true" multiValued="true" />
+  <field name="title_suggest" type="text_suggest" indexed="false" stored="true" multiValued="true" />
+  <field name="subject_suggest" type="text_suggest" indexed="false" stored="true" multiValued="true" />
+
+ <!-- Insert the dynamic fields -->
 
  &dynamic_fields;
  &language_parsers;
